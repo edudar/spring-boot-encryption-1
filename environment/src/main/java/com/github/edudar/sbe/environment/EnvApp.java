@@ -42,23 +42,6 @@ public class EnvApp implements CommandLineRunner {
         }
     }
 
-    @Component
-    @ConfigurationPropertiesBinding
-    public static class EncryptionConverter implements Converter<String, String> {
-
-        private final BasicTextEncryptor encryptor;
-
-        public EncryptionConverter() {
-            this.encryptor = new BasicTextEncryptor();
-            this.encryptor.setPassword("test");
-        }
-
-        @Override
-        public String convert(String source) {
-            return source.startsWith("ENC:") ? this.encryptor.decrypt(source.substring(4)) : source;
-        }
-    }
-
     public static class EncryptionAwareStandardEnvironment extends StandardEnvironment {
 
         private final BasicTextEncryptor encryptor;
