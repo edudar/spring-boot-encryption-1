@@ -79,7 +79,7 @@ public class ConfApp implements CommandLineRunner {
 
     @Override
     public void run(String... args) {
-        System.out.println(service.getName());
-        System.out.println(application.getName());
+        System.out.println("@Value(\"${application.name}\"): " + service.getName());
+        System.out.println("@ConfigurationProperties(prefix = \"application\"): " + application.getName());
     }
 }
