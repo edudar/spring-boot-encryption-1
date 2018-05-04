@@ -10,9 +10,7 @@ import org.springframework.boot.WebApplicationType;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.boot.context.properties.ConfigurationPropertiesBinding;
 import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
-import org.springframework.core.convert.converter.Converter;
 import org.springframework.core.env.ConfigurablePropertyResolver;
 import org.springframework.stereotype.Component;
 
@@ -44,7 +42,7 @@ public class ConfApp implements CommandLineRunner {
             this.name = name;
         }
     }
-    
+
     @Component
     public static class EncryptionAwarePropertySourcesPlaceholderConfigurer extends PropertySourcesPlaceholderConfigurer {
 
