@@ -1,0 +1,17 @@
+subprojects {
+    apply plugin: 'java'
+
+    group 'com.github'
+    version '1.0-SNAPSHOT'
+
+    sourceCompatibility = 1.8
+
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        compile 'org.springframework.boot:spring-boot-starter:2.0.1.RELEASE'
+        compile 'org.jasypt:jasypt:1.9.2'
+    }
+}

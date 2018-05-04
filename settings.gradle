@@ -1,0 +1,3 @@
+rootProject.name = 'spring-boot-encryption-1'
+include 'environment', 'configurer'
+
